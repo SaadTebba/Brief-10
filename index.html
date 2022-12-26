@@ -21,7 +21,7 @@
         <section>
             <div class="container">
                 <form action="">
-                    <div class="input-group w-50 d-flex justify-content-center">
+                    <div class="input-group w-50 col-6">
                         <input type="text" id="searchbar" class="form-control" placeholder="Search for a movie name">
                         <button class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
@@ -29,20 +29,25 @@
             </div>
         </section>
 
-
+<!-- https://www.youtube.com/watch?v=eS-FVnhjvEQ -->
 
         <section>
             <div class="table-responsive">
                 <table class="table table-hover table-striped table-bordered">
-                    <tr>
-                        <th>Titre</th>
-                        <th>Réalisateur</th>
-                        <th>Durée</th>
-                        <th>L'année de production</th>
-                        <th>Poster</th>
-                        <th>Festivals</th>
-                        <th>Acteurs</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Réalisateur</th>
+                            <th>Durée</th>
+                            <th>L'année de production</th>
+                            <th>Poster</th>
+                            <th>Festivals</th>
+                            <th>Acteurs</th>
+                        </tr>
+                    </thead>
+                    <tbody id="values">
+
+                    </tbody>
                 </table>
             </div>
         </section>
