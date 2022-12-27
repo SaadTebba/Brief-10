@@ -1,53 +1,60 @@
-fetch("movies.json")
-.then(function (response) {
-  return response.json();
-})
-.then(function (movies) {
-  let rows = document.getElementById('values');
-  let moviesList = "";
+// fetch("movies.json")
+// .then(response => response.json())
+// .then(data => console.log(data));
 
-  for (let movie of movies) {
-    moviesList += 
-          `<tr>
-            <td>${movies.titre}</td>
-            <td>${movies.réalisateur}</td>
-            <td>${movies.durée}</td>
-            <td>${movies.production}</td>
-            <td>${movies.poster}</td>
-            <td>${movies.festivals}</td>
-            <td>${movies.acteurs}</td>
-          </tr>`
-  }
-  rows.innerHTML += moviesList;
-})
 
-// let xhr = new XMLHttpRequest();
 
-// xhr.onreadystatechange = function () {
 
-//   if (this.readyState == 4 && this.status == 200) {
-//     let response = JSON.parse(xhr.responseText);
-//     let rows = document.getElementById('values');
-//     let moviesList = "";
-//     document.getElementById("TESTING").innerHTML = response;
+// fetch("movies.json")
+// .then(function (response) {
+//   return response.json();
+// })
+// .then(function (movies) {
+//   let values = document.getElementById('values');
+//   let moviesList = "";
 
-//     for (let movie of movies) {
-//       moviesList += `<tr>
-//           <td>${movies.titre}</td>
-//           <td>${movies.réalisateur}</td>
-//           <td>${movies.durée}</td>
-//           <td>${movies.production}</td>
-//           <td>${movies.poster}</td>
-//           <td>${movies.festivals}</td>
-//           <td>${movies.acteurs}</td>
+//   for (let movie of movies) {
+//     moviesList += 
+//           `<tr>
+//             <td>${movies.titre}</td>
+//             <td>${movies.réalisateur}</td>
+//             <td>${movies.durée}</td>
+//             <td>${movies.production}</td>
+//             <td><img src='${movies.poster}'></td>
+//             <td>${movies.festivals}</td>
+//             <td>${movies.acteurs}</td>
 //           </tr>`
-//     }
-
 //   }
-// }
+//   values.innerHTML += moviesList;
+// })
 
-// xhr.open('GET', 'movies.json', true);
-// xhr.send();
+
+
+
+
+let xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function () {
+
+  if (this.readyState == 4 && this.status == 200) {
+    let response = JSON.parse(xhr.responseText);
+    let rows = document.getElementById('values');
+    document.getElementById("TESTING").innerHTML = response;
+
+    for (i = 0; response.length;i++) {
+      console.log("Testing");
+    }
+
+  }
+}
+
+xhr.open('GET', 'movies.json', true);
+xhr.send();
+
+
+
+
+
 
 // function sortTable(n) {
 
