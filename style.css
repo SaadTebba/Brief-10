@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 section:first-of-type {
-    height: 100vh;
+    height: 30vh;
     background-image: url("arrangement-cinema-elements-black-background-with-copy-space.jpg");
+    margin-bottom: 2%;
+    padding: 2%;
 }

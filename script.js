@@ -1,59 +1,50 @@
-// fetch("movies.json")
-// .then(response => response.json())
-// .then(data => console.log(data));
+function createTable(array) {
 
+  for (i = 0; i < array.length; i++) {
+    row = "";
+    // for (i = 0; i < array.length; i++) {
 
+    // }
+    row += 
+    `
+    <tr>
 
+     <td>${array[i].titre}</td>
+     <td>${array[i].réalisateur}</td>
+     <td>${array[i].durée} Minutes</td>
+     <td>${array[i].production}</td>
+     <td><img src="${array[i].poster}"></td>
 
-// fetch("movies.json")
-// .then(function (response) {
-//   return response.json();
-// })
-// .then(function (movies) {
-//   let values = document.getElementById('values');
-//   let moviesList = "";
+     <td>
+     <ul>
+     <li>${array[i].festivals[0]}</li>
+     <li>${array[i].festivals[1]}</li>
+     <li>${array[i].festivals[2]}</li>
+     </ul>
+     </td>
 
-//   for (let movie of movies) {
-//     moviesList += 
-//           `<tr>
-//             <td>${movies.titre}</td>
-//             <td>${movies.réalisateur}</td>
-//             <td>${movies.durée}</td>
-//             <td>${movies.production}</td>
-//             <td><img src='${movies.poster}'></td>
-//             <td>${movies.festivals}</td>
-//             <td>${movies.acteurs}</td>
-//           </tr>`
-//   }
-//   values.innerHTML += moviesList;
-// })
+     <td>${array[i].acteurs}</td>
+    </tr>
+    `
+    document.getElementById('values').innerHTML += row;
+  }
 
+}
 
-
-
+let RESPONSE = [];
 
 let xhr = new XMLHttpRequest();
 
 xhr.onreadystatechange = function () {
 
   if (this.readyState == 4 && this.status == 200) {
-    let response = JSON.parse(xhr.responseText);
-    let rows = document.getElementById('values');
-    document.getElementById("TESTING").innerHTML = response;
-
-    for (i = 0; response.length;i++) {
-      console.log("Testing");
-    }
-
+    RESPONSE = JSON.parse(xhr.responseText);
+    createTable(RESPONSE);
   }
 }
 
 xhr.open('GET', 'movies.json', true);
 xhr.send();
-
-
-
-
 
 
 // function sortTable(n) {
