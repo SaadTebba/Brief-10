@@ -13,12 +13,12 @@
 
 <body>
     <main>
-
         <section>
             <div class="container">
                 <form action="">
                     <div class="input-group w-50 mx-auto">
-                        <input type="text" id="searchbar" class="form-control" placeholder="Search for a movie name" onkeyup="search()">
+                        <input type="text" id="searchbar" class="form-control" placeholder="Search for a movie name"
+                            onkeyup="search()">
                         <button class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </form>
@@ -31,17 +31,17 @@
                 <table class="table table-hover table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>Titre</th>
-                            <th>Réalisateur</th>
-                            <th>Durée</th>
-                            <th>L'année de production</th>
+                            <th class="cursor-pointer" onclick="sortByTitre()">Titre  <i class='fas fa-sort'></i></th>
+                            <th onclick="sortByRealisateur()">Réalisateur  <i class='fas fa-sort'></i></th>
+                            <th onclick="sortByDuree()">Durée  <i class='fas fa-sort'></i></th>
+                            <th onclick="sortByProductionYear()">L'année de production  <i class='fas fa-sort'></i></th>
                             <th>Poster</th>
                             <th>Festivals</th>
                             <th>Acteurs</th>
                         </tr>
                     </thead>
                     <tbody id="values">
-
+                        
                     </tbody>
                 </table>
             </div>

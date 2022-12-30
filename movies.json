@@ -8,7 +8,9 @@
         "festivals": [
             "1",
             "2",
-            "3"
+            "3",
+            "4",
+            "5"
         ],
         "acteurs": [
             {
@@ -36,8 +38,7 @@
         "poster": "/posters/2.jpg",
         "festivals": [
             "1",
-            "2",
-            "3"
+            "2"
         ],
         "acteurs": [
             {
